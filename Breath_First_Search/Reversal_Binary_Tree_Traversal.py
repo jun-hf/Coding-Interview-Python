@@ -46,6 +46,8 @@ def reverseTraversal(root):
     
     return result
 
+test = 1
+
 def main():
     root = TreeNode(1)
     root.left = TreeNode(2)
