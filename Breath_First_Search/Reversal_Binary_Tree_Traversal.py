@@ -21,6 +21,9 @@ class TreeNode:
     def __init__(self, value):
         self.value = value
         self.left, self.right = 0, 0
+    
+    def __str__(self):
+        return self.value
 
 
 def reverseTraversal(root):
