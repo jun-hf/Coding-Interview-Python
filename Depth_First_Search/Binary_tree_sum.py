@@ -6,19 +6,15 @@ is a total sum from the root to leaf node == X.
 Design:
 Using recersive call. 
 
-space: the call stack o(n)
-
-
-def path_sum(node, x):
-
-    if node == None:
+Design:
+def sum_path(root, x):
+    if root == None:
         return False
-
-    if node.value == x and (node.left is None and node.right is None):
+    
+    if root.value == x and root.left == None and root.right ==None:
         return True
-
-    return path_sum(node.left, x-node.value) or path(node.right, v-node.value)
-
+    result = x - root.value
+    return sum_path(root.left, result) or sum_path(root.right, result)
 """
 
 class TreeNode:
